@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+
+.draw, .draw2 {
+	width: 90%; height: 80%; position: static; float: left; margin-left: 5%; margin-top: 8vh;}
+	
+.draw2 {
+	transform: rotate(180deg);
+	margin-left: -90%;
+}
+	
+.draw:before, .draw2:before {
+ 	 display: block;
+  	position: relative;
+  	width: 0;
+  	height: 10px;
+  	content: "";
+	background-color: #F470B9;
+  	transition: width  0.4s linear;
+}
+
+.draw2:before {
+	transition: width 0.4s linear 0.8s;
+}
+
+
+.draw:after, .draw2:after {
+	display: block;
+	position: relative;
+	height: 0;
+	width: 10px;
+	margin-left: 100%;
+	margin-top: -10px;
+	content: "";
+	background-color: #F470B9;
+	transition: height 0.4s linear 0.4s;
+}
+
+.draw2:after {
+	transition: height 0.4s linear 1.2s;
+}
+
+.right .draw:after, .right .draw2:after, .right .draw:before, .right .draw2:before {
+	 background-color: #98004a;
+}
+
+.trigger:after, .trigger2:after {
+	height: 100%;
+}
+
+.trigger:before, .trigger2:before {
+	width: 100%;
+}
+
+.right .draw {
+	transform: scaleX(-1);
+}
+
+.right .draw2 {
+	 transform: scaleX(-1) rotate(180deg);
+}
+
+/* CSS Document */
+

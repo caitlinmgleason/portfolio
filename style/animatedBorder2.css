@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+.draw, .draw2 {
+	width: 90%; height: 80%; position: relative; float: left; margin-left: 5%; margin-top: 15vh; position: static;
+}
+	
+.draw2 {
+	transform: rotate(180deg);
+}
+
+.draw {
+	margin-left: -90%;
+}
+	
+.draw:before, .draw2:before {
+ 	 display: block;
+  	position: relative;
+  	width: 0;
+  	height: 10px;
+  	content: "";
+	background-color: #335214;
+  	transition: width  0.4s linear;
+}
+
+.draw2:before {
+	transition: width 0.4s linear 0.8s;
+}
+
+
+.draw:after, .draw2:after {
+	display: block;
+	position: relative;
+	height: 0;
+	width: 10px;
+	margin-left: 100%;
+	margin-top: -10px;
+	content: "";
+	background-color: #335214;
+	transition: height 0.4s linear 0.4s;
+}
+
+.draw2:after {
+	transition: height 0.4s linear 1.2s;
+}
+
+.right .draw:after, .right .draw2:after, .right .draw:before, .right .draw2:before {
+	 background-color: #FC9;
+}
+
+.trigger:after, .trigger2:after {
+	height: 100%;
+}
+
+.trigger:before, .trigger2:before {
+	width: 100%;
+}
+
+/*.right .draw {
+	transform: scaleX(-1);
+}
+
+.right .draw2 {
+	 transform: scaleX(-1) rotate(180deg);
+}*/
+
+/*COLOR MAGIC*/
+
+
+#h2go .draw:after, #h2go .draw2:after, #h2go .draw:before, #h2go .draw2:before {
+	background-color: #007399;
+}
+
+#louboutin .draw:after, #louboutin .draw2:after, #louboutin .draw:before, #louboutin .draw2:before {
+	background-color: #FA2200;
+}
+
+#CPS .draw:after, #CPS .draw2:after, #CPS .draw:before, #CPS .draw2:before {
+	background-color: #FFCB27;
+}
+
+#wendys .draw:after, #wendys .draw2:after, #wendys .draw:before, #wendys .draw2:before {
+	background-color: #BF1122;
+}
+
+#BT .draw:after, #BT .draw2:after, #BT .draw:before, #BT .draw2:before {
+	background-color: #434244;
+}
+
+#wildgarden .draw:after, #wildgarden .draw2:after, #wildgarden .draw:before, #wildgarden .draw2:before {
+	background-color: #ffaf57;
+}
+
+#fleurotica .draw:after, #fleurotica .draw2:after, #fleurotica .draw:before, #fleurotica .draw2:before {
+	background-color: #870430;
+}
+
+#misc .draw:after, #misc .draw2:after, #misc .draw:before, #misc .draw2:before {
+	background-color: #F470B9;
+}

@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Rembrandt Test</title>
+<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="jquery.stellar.js"></script>
+<script src="jquery.waypoints.min.js"></script>
+<script>
+$(document).ready(function(){
+	$.stellar({
+    hideDistantElements: false,
+	});
+	var waypoints = $('.overlay').waypoint(function(direction) {
+  		$('.overlay').toggleClass('fade');
+		$('.logo').toggleClass('fadelogo');
+	}, {
+  	offset: '-1px'
+	})
+	
+	
+	
+});
+
+
+	
+</script>
+<style>
+
+body {margin: 0px;}
+
+.nightwatch{
+	width: 100%;
+	position: absolute;
+	left: 0; !important
+	top:0; !important
+}
+
+.nightwatch img {width: 100%; margin-top: -100px;}
+
+.overlay {
+	background: black; 
+	opacity: .75; 
+	height: 100%;
+	 -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+}
+
+.logo {
+	display: table; 
+	height: 100%;
+	-webkit-transition: all .5s; 
+	transition: all .5s; 
+	margin-top:0; 
+	opacity: 1;
+}
+
+.fade {
+	opacity: 0;
+}
+
+.fadelogo {
+	opacity: 0;
+	margin-top: -50px;
+}
+
+
+
+
+</style>
+</head>
+
+<body>
+
+<div style="width: 100%; position: relative; height: 100vh; left: 0; top: 0; overflow: hidden;">
+    <div class="nightwatch" data-stellar-ratio=".5">
+    	<img src="img/0146.jpg">
+    </div>
+    
+    <div class="nightwatch" data-stellar-ratio=".75" style="left: -2.5px; top: -2.5px;">
+    	<img src="img/anatomy6.png">
+    </div>
+    
+    <div class="nightwatch" data-stellar-ratio="1" style="left: -5px; top: -5px;">
+    	<img src="img/anatomy5.png">
+    </div>
+    
+    <div class="nightwatch" data-stellar-ratio="1.25" style="left: -5px; top: -5px;">
+    	<img src="img/anatomy4.png">
+    </div>
+    
+    <div class="nightwatch" data-stellar-ratio="1.5" style="left: -7.5px; top: -7.5px;">
+    	<img src="img/anatomy3.png">
+    </div>
+    
+    <div class="nightwatch"  data-stellar-ratio="1.75" >
+    	<img src="img/anatomy2.png">
+    </div>
+    
+    <div class="nightwatch" data-stellar-ratio="2" style="left: -12.5px; top: -12.5px;">
+    	<img src="img/anatomy1.png">
+    </div>
+    
+    <div class="nightwatch overlay"></div>
+    
+    <div class="nightwatch logo">
+    	<div style="display: table-cell; vertical-align: middle; text-align: center;"><img src="img/logo4.png" style="width:12%; margin-top: 10vh;"></div>
+    </div>
+</div>
+<div style="height: 100vh; background: black; position: relative; left: -10px; top:-802px;" data-stellar-ratio="2"></div>
+</body>
+</html>

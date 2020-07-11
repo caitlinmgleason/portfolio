@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+
+@keyframes arrow1 {
+	0% {padding-left: 0%;}
+	25% {padding-left: 30%;}
+	35% {padding-left: 30%;}
+	60% {padding-left: 30%;}
+	100% {padding-left: 0%;}
+}
+
+@keyframes arrow2 {
+	0% {padding-left: 0%;}
+	25% {padding-left: 0%;}
+	35% {padding-left: 30%;}
+	60% {padding-left: 30%;}
+	100% {padding-left: 0%;}
+}
+
+.open-arrow {
+	opacity: 0;
+	transition: opacity .5s linear, display .25s linear .75s;
+	position: absolute;
+	width: 40%;
+	z-index: 5000;
+    top: 47.5%;
+    transform: translateY(-50%);
+    margin-left: 3vw;
+	
+}
+
+.open-arrow img {
+	width: 50%;
+	float: left;
+	position: absolute;
+}
+
+.open-arrow img:nth-child(2) {
+	margin-left: 35%;
+}
+
+.closed:hover .open-arrow img:nth-child(1) {
+	animation: arrow2 1s linear infinite;
+}
+
+.closed:hover .open-arrow img:nth-child(2) {
+	animation: arrow1 1s linear infinite;
+}
